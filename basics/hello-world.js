@@ -1,0 +1,1 @@
+console.log('Hello Daniel. Lets start over and build a STRONG javascript foundation :)')
