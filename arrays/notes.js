@@ -18,9 +18,9 @@ const notes = ['note 1', 'note 2', 'note 3']
 // notes.splice(2,3, 'added new item to array')
 // notes.splice(0,1)
 
-notes.splice(2,1)
-notes.push('buy coffee')
-notes.shift()
+// notes.splice(2,1)
+// notes.push('buy coffee')
+// notes.shift()
 
 // let hello = function(truth) {
 //   if (greeting = true) {
@@ -31,6 +31,13 @@ notes.shift()
 // }
 
 // console.log(hello(true))
+
+notes[2] = 'this is now the new notes 3'
+
+notes.forEach(function (item, index) {
+  console.log(index)
+  console.log(item)
+})
 
 console.log(notes.length)
 console.log(notes)
