@@ -1,4 +1,13 @@
-const notes = ['note 1', 'note 2', 'note 3']
+const notes = [{
+  title: 'My next Trip',
+  body: 'I would like to go to spain'
+}, {
+  title: 'Habits to work on',
+  body: 'Excercise. Eating a bit better'
+}, {
+  title: 'Office modifications',
+  body: 'Get a new seat'
+}]
 
 // // notes.pop()
 // // notes.push('My new note')
@@ -32,12 +41,49 @@ const notes = ['note 1', 'note 2', 'note 3']
 
 // console.log(hello(true))
 
-notes[2] = 'this is now the new notes 3'
+// notes[2] = 'this is now the new notes 3'
 
-notes.forEach(function (item, index) {
-  console.log(index)
-  console.log(item)
-})
+// notes.forEach(function (item, index) {
+//   console.log(index)
+//   console.log(item)
+// })
 
-console.log(notes.length)
-console.log(notes)
+
+const findNote = function (notes, noteTitle) {
+  return notes.find(function (note, index){
+    return note.title.toLowerCase() === noteTitle.toLowerCase()
+  })
+}
+
+// const findNote = function (notes, noteTitle) {
+//   const index = notes.findIndex(function (note, index){
+//     return note.title === noteTitle
+//   })
+//   return notes[index]
+// }
+
+const note = findNote(notes, 'office modifications')
+console.log(note)
+
+
+
+
+
+
+
+//no need -
+// console.log(notes.length)
+// console.log(notes)
+
+// const index = notes.findIndex(function (notes, index) {
+//   console.log(notes)
+//   return notes.title === 'Habits to work on'
+// })
+
+// console.log(index)
+
+
+
+
+//arrays -note - find will find the array text 
+// find index will find the array index once found itll stop going through arrays
