@@ -1,35 +1,31 @@
 
 const todos = [{
   text: 'Order Cat Food',
-  completed: 'true'
+  completed: false
 }, {
   text: 'Clean Kitchen',
-  completed: 'false'
+  completed: false
 }, {
   text: 'Buy food',
-  completed: 'false'
+  completed: true
 }, {
   text: 'Do work',
-  completed: 'false'
+  completed: false
 }, {
   text: 'Excercise',
-  completed: 'true'
-},]
-
-// var p = document.querySelectorAll('p')
-
-//  p.forEach(function(p) {
-//   if (p.textContent.includes('the')){
-//      p.remove()
-//    }
-//  })
+  completed: true
+}]
 
 const incompleteTodos = todos.filter(function (todo) {
-  return !todos.completed
+  return !todo.completed
+})
+
+const completedTodos = todos.filter(function (todoos){
+  return todoos.completed
 })
 
 const summary = document.createElement('h2')
-summary.textContent = `You have ${incompleteTodos.length} todos left`
+summary.textContent = `You have ${incompleteTodos.length} todos left and you have completed ${completedTodos.length}`
 document.querySelector('body').appendChild(summary)
 
 todos.forEach(function (todo) {
