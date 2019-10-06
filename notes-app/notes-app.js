@@ -11,34 +11,6 @@ const notes = [{
   body: 'Get a new seat'
 }] 
 
-//delete element from static html
-//Query and remove
-// const p = document.querySelector('heading-1')
-// p.remove()
-
-//Query all and remove
-// const ps = document.querySelectorAll('p')
-
-//  ps.forEach(function (p) {
-//   p.remove()
-// })
-
-//console log write
-// const ps = document.querySelectorAll('p')
-
-//   ps.forEach(function(p) {
-//     console.log(p.textContent)
-//   })
-
-// change text for all
-const ps = document.querySelectorAll('p')
-
-  ps.forEach(function(p) {
-    p.textContent = '***********'
-  })
-
-  //add a new element 
-
-  const newParagraph = document.createElement('p')
-  newParagraph.textContent = 'This is a new element using javascript'
-  document.querySelector('body').appendChild(newParagraph)
+document.querySelector('button').addEventListener('click', function () {
+  console.log('did this work')
+})
