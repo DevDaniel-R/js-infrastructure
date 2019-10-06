@@ -34,8 +34,10 @@ todos.forEach(function (todo) {
   document.querySelector('body').appendChild(p)
 })
 
-document.querySelector('button').addEventListener('click', function () {
+document.querySelector('#add-todo').addEventListener('click', function (e) {
   console.log('Add Todo!')
 })
-// print message letting us know how many todos you have left
-//print a p for each todo above
+
+document.querySelector('#todo-input').addEventListener('input', function (e) {
+  console.log(e.target.value)
+})
