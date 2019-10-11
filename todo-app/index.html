@@ -10,9 +10,17 @@
 
 <body>
   <h1 class="heading-1">Todo-App</h1>
-  <input id="todo-input" type="text" placeholder="Enter Todo">
-  <button id='add-todo'>Add Todo</button>
-
+  <!-- <input id="new-todo-text" type="text" placeholder="Enter Todo">
+  <button id='add-todo'>Add Todo</button> -->
+  <input id="search-text" type="text" placeholder="Filter todos">
+  <label>
+    <input type="checkbox" id="hide-completed"> Hide Completed
+  </label>
+  <div id="todos"></div>
+  <form id="new-todo">
+    <input type="text" placeholder="somethind to do" name="text">
+    <button>Add Todo</button>
+  </form>
   <script src="todo-app.js"></script>
 </body>
 
