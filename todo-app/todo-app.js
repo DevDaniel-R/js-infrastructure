@@ -24,8 +24,22 @@ const filters = {
 
 const renderTodos = function (todos, filters) {
   const filteredTodos = todos.filter(function (todo) {
-    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    const searchTextMatch =todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    const hideCompletedMatch =  !filters.hideCompleted || !todo.completed
+
+
+
+
+
+    return searchTextMatch && hideCompletedMatch
   })
+
+    // if (filters.hideCompleted) {
+    //   return !todo.completed
+    // } else {
+    //   return true
+    // }
+
   
 const incompleteTodos = filteredTodos.filter(function (todo) {
   return !todo.completed

@@ -12,12 +12,13 @@
   <h1 class="heading-1">Notes App</h1>
   <h2 class="heading-2">Take notes and never forget</h2>
   <input id="search-text" type="text" placeholder="Filter Notes">
+  <select id="filter-by">
+    <option value="byEdited">Sort by Last edited</option>
+    <option value="byCreated">Sort by Recently created</option>
+    <option value="alphabetical">Sort Alphabetically</option>
+  </select>
   <div id="notes"></div>
   <button id='create-note'>Create Note</button>
-  <label>
-    <input id="for-fun" type="checkbox"> Check me for fun
-  </label>
-  </form>
   <script src='notes-app.js'></script>
 </body>
 
